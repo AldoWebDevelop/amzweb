@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #55759e;
+    background: #ffffff;
 }
 
 nav {
@@ -15,7 +15,7 @@ nav {
     position: fixed;
     width: 100%;
     overflow: visible;
-    padding-left: 60px;
+    box-shadow: 0px -11px 130px -30px rgba(0, 0, 0, 0.404);
 }
 
 nav::after {
@@ -26,8 +26,8 @@ nav::after {
 
 nav .logo img {
     float: left;
-    width: 190px;
-    
+    width: 160px;
+    padding-left: 60px;
     margin: 5px 0;
 }
 
@@ -50,7 +50,7 @@ nav ul li a {
     text-decoration: none;
     line-height: 112px;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 45px 15px;
     opacity: 1;
     transition: 0.5s;
@@ -73,6 +73,7 @@ nav ul ul {
 
 nav ul ul ul {
     border-top: none;
+    
 }
 
 nav ul li:hover>ul {
@@ -158,7 +159,7 @@ nav ul ul ul li {
         transition: 0.5s;
     }
     .show:hover {
-        color: #000000;
+        color: #ffffff;
         transition: 0.3s;
         opacity: 1;
     }
