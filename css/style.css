@@ -7,11 +7,11 @@
 }
 
 body {
-    background: #e6e6e6;
+    background: #dadada;
 }
 
 nav {
-    background: black;
+    background-color: #c5c5c5;
     position: fixed;
     width: 100%;
     overflow: visible;
@@ -23,13 +23,11 @@ nav::after {
     display: table;
 }
 
-nav .logo {
+nav .logo img{
     float: left;
-    color: wheat;
-    font-size: 45px;
-    font-weight: 800;
-    line-height: 70px;
+    width: 250px;
     padding-left: 60px;
+    margin: 5px 0;
 }
 
 nav ul {
@@ -42,16 +40,16 @@ nav ul {
 nav ul li {
     float: left;
     display: inline-block;
-    background: black;
+    /* background: black; */
     margin: 0 5px;
 }
 
 nav ul li a {
-    color: wheat;
+    color: #55759e;
     text-decoration: none;
-    line-height: 70px;
-    font-size: 18px;
-    padding: 25px 15px;
+    line-height: 112px;
+    font-size: 22px;
+    padding: 45px 15px;
     opacity: 1;
     transition: 0.3s;
 }
@@ -68,8 +66,8 @@ nav ul ul li a:hover {
 
 nav ul ul {
     position: absolute;
-    top: 90px;
-    border-top: 3px solid #00e6da;
+    top: 200px;
+    border-top: 3px solid #55759e;
     opacity: 0;
     visibility: hidden;
     transition: top 0.3s;
@@ -80,7 +78,7 @@ nav ul ul ul {
 }
 
 nav ul li:hover>ul {
-    top: 70px;
+    top: 112px;
     opacity: 1;
     visibility: visible;
 }
@@ -88,10 +86,11 @@ nav ul li:hover>ul {
 nav ul ul li {
     position: relative;
     margin: 0px;
-    width: 150px;
+    width: 200px;
     float: none;
     display: list-item;
-    border-bottom: 1px solid rgba(189, 189, 189, 0.3);
+    border-bottom: 1px solid #55759e;
+    background-color: #c5c5c5;
 }
 
 nav ul ul li a {
@@ -99,23 +98,25 @@ nav ul ul li a {
 }
 
 nav ul ul ul li {
+    background-color: #c5c5c5;
     position: relative;
-    top: -70px;
-    left: 150px;
+    top: -112px;
+    left: 200px;
 }
 
 .show, .hamburger-box, input {
     display: none;
 }
 
-@media all and (max-width: 899px) {
+@media all and (max-width: 995px) {
     nav ul {
-        margin-right: 9px;
+        margin-right: 0px;
         float: left;
     }
-    nav .logo {
-        padding-left: 45px;
-        width: 100%;
+    nav .logo img{
+        float: left;
+        width: 170px;
+        padding-left: 25px;
     }
     nav ul li, nav ul ul li {
         display: block;
@@ -123,6 +124,8 @@ nav ul ul ul li {
     }
     nav ul li a {
         line-height: 40px;
+        font-size: 18px;
+        padding: 15px 15px;
     }
     nav ul ul {
         top: 70px;
@@ -143,13 +146,13 @@ nav ul ul ul li {
         padding-left: 40px;
     }
     nav ul ul ul a{
-        padding-left: 80px;
+        padding-left: 100px;
     }
     .show {
         display: block;
-        color: wheat;
+        color: #55759e;
         font-size: 18px;
-        padding: 0 15px;
+        padding: 8px 15px;
         line-height: 40px;
         cursor: pointer;
     }
@@ -163,7 +166,7 @@ nav ul ul ul li {
         display: block;
         color: white;
         position: absolute;
-        top: 23px;
+        top: 32px;
         right: 40px;
         line-height: 70px;
     }
@@ -175,9 +178,9 @@ nav ul ul ul li {
     }
 
     [id^=btn]:checked + ul{
-        transition: 3s;
         display: block;
         overflow: hidden;
+        width: 100%;
     }
 
     .pointer{
@@ -190,13 +193,17 @@ nav ul ul ul li {
 
 .principal{
     padding-top: 100px;
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 20%;
+    padding-right: 20%;
     color: black;
     height: 100vh;
 }
 
 #precios{
+    padding-top: 100px;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: black;
     height: 100vh;
 }
 /* FIN INICIO */
