@@ -15,7 +15,8 @@ nav {
     position: fixed;
     width: 100%;
     overflow: visible;
-    padding-left: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 nav::after {
@@ -27,14 +28,12 @@ nav::after {
 nav .logo img {
     float: left;
     width: 190px;
-    
     margin: 5px 0;
 }
 
 nav ul {
     float: right;
     list-style: none;
-    margin-right: 40px;
     position: relative;
 }
 
@@ -106,15 +105,33 @@ nav ul ul ul li {
     display: none;
 }
 
+@media all and (max-width: 1310px) {
+    nav {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    nav {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
 @media all and (max-width: 995px) {
+    nav {
+        padding-left: 0px;
+        padding-right: 0px;
+        box-shadow: 0px -11px 120px -30px rgba(0, 0, 0, 0.733);
+    }
     nav ul {
-        margin-right: 0px;
         float: left;
     }
     nav .logo img {
         float: left;
         width: 170px;
-        padding-left: 25px;
+        margin-left: 40px;
     }
     nav ul li, nav ul ul li {
         display: block;
@@ -169,8 +186,8 @@ nav ul ul ul li {
         display: block;
         color: white;
         position: absolute;
-        top: 32px;
-        right: 40px;
+        top: 38px;
+        right: 45px;
         line-height: 70px;
     }
     nav ul a:hover {
@@ -200,6 +217,88 @@ nav ul ul ul li {
     padding-right: 20%;
     color: black;
     height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+}
+
+.container {
+    width: 100%;
+    max-width: auto;
+    margin: auto;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'img-1 img-2 img-3 img-4';
+}
+
+@media screen and (max-width: 1300px) {
+    /* .image-gallery {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'img-1 img-2 img-3 img-4';
+    } */
+    .image-gallery a {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .image-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'img-1 img-2' 'img-3 img-4';
+    }
+    .image-gallery a {
+        max-height: 50vh;
+    }
+}
+
+.image-gallery a {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.image-gallery a h1, .image-gallery a h2 {
+    color: #f6f6f6;
+    position: relative;
+}
+
+.img-1 {
+    grid-area: img-1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../img/imagen-principal/frutos-secos.jpg);
+}
+
+.img-2 {
+    grid-area: img-2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../img/imagen-principal/meditation-woman.jpg);
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../img/imagen-principal/estiramiento-woman.jpg);
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../img/imagen-principal/woman-gloves.jpg);
 }
 
 #precios {
