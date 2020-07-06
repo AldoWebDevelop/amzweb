@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../img/icon.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/hamburgers.css">
+    <title>AMZ Avanzada</title>
+</head>
+
+<body>
+    <div id="inicio">
+        <header>
+            <div id="navbar">
+                <nav>
+                    <div class="logo">
+                        <a href="index.html"><img src="../../img/logo.png" alt=""></a>
+                    </div>
+                    <button class="hamburger hamburger--squeeze bars" type="button">
+                        <label for="btn" class="pointer">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </label>
+                    </button>
+                    <input type="checkbox" id="btn">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li>
+                            <label for="btn-1" class="show underline">Trabajos &DownArrow;</label>
+                            <a>Trabajos &DownArrow;</a>
+                            <input type="checkbox" id="btn-1">
+                            <ul>
+                                <li><a href="#">Intranet</a></li>
+                                <li>
+                                    <label for="btn-2" class="show inc">Página Web &rightarrow;</label>
+                                    <a>Página Web &rightarrow;</a>
+                                    <input type="checkbox" id="btn-2">
+                                    <ul>
+                                        <li><a href="#">Básica</a></li>
+                                        <li><a href="#">Intermedia</a></li>
+                                        <li><a href="#">Avanzada</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li>
+                            <label for="btn-3" class="show underline">Móvil &DownArrow;</label>
+                            <a>Móvil &DownArrow;</a>
+                            <input type="checkbox" id="btn-3">
+                            <ul>
+                                <li><a>##Coming##</a></li>
+                                <li><a>##Coming##</a></li>
+                                <li><a>##Coming##</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="margen">
+        <div class="principal">
+
+        </div>
+        <div id="precios">
+
+        </div>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script>
+        var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+
+        var hamburgers = document.querySelectorAll(".hamburger");
+        if (hamburgers.length > 0) {
+            forEach(hamburgers, function (hamburger) {
+                hamburger.addEventListener("click", function () {
+                    this.classList.toggle("is-active");
+                }, false);
+            });
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 700, function () {
+                        window.location.hash = hash;
+                    })
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
